@@ -1,8 +1,9 @@
 let tema = localStorage.getItem("tema") || 0
+let temaa = document.getElementById("tema")
 
-setInterval(()=> {
+temaa.addEventListener("blur",function() {
   
-  tema = document.getElementById("tema").value
+  tema = temaa.value
   localStorage.setItem("tema",tema)
   
   if (tema == "1") {
@@ -16,6 +17,11 @@ setInterval(()=> {
   document.body.style.color = "white"
   
 }
+})
+
+
   
-},100)
+  
+  
+
 
