@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <meta name="description" content="Aplicativo da DGX TEAM!">
+  
+  
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="logo.ico">
+  <link rel="manifest" href="app.json">
+  
+  <title>login</title>
+</head>
+<body>
+  
+  
+  
+  <header>
+    <h2>DGX TEAM</h2>
+    
+    <img src="logo.png" alt="logo.png">
+    
+    <p>DGX ORG, A PRÓXIMA ORG BRASILEIRA</p>
+    
+    
+  </header>
+  
+  
+  <div>
+    
+  
+    
+      
+    <h3>Seu Nome:</h3>
+    
+    <input id="Nome" type="text" placeholder="nome aqui..." required>
+    
+    <h3>Seu E-mail:</h3>
+    
+    <input id="email" type="email" placeholder="e-mail aqui..." required>
+    <br>
+    <button onclick="ir()" >Continuar</button>
+    
+    
+    
+    <br>
+      
+    <h3 id="aviso">Digite um código de verificação:</h3>
+    
+    <input id="cod" type="number" placeholder="Código de verificação..." onkeyup="cood()">
+    
+    
+    
+  </div>
+  
+  <script>
+    
+    // Verifica se o navegador suporta a instalação de aplicativos da web progressivos
+if ('InstallTrigger' in window) {
+  // Chama a solicitação de instalação do aplicativo assim que a página carregar
+  window.addEventListener('load', () => {
+    // Mostra a solicitação de instalação do aplicativo
+    window.InstallTrigger.installPrompt();
+  });
+} else {
+  
+  console.log("Seu navegador não suporta a função de mostrar solicitação de instalação")
+  
+}
+    
+  </script>
+  <script src="tema.js">tema.js</script>
+  <script src="login.js">login.js</script>
+</body>
+</html>

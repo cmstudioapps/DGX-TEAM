@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" content="Aplicativo da DGX TEAM">
+  <title>DGX TEAM</title>
+  <link rel="shortcut icon" type="image/x-icon" href="logo.ico">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="stylesheet" href="home.css">
+  <link rel="manifest" href="app.json">
+</head>
+
+<body>
+
+ <header>
+   
+ <img id="logo" src="logo.png" alt="">
+   
+   <h3>DGX TEAM</h3>
+   
+   <h1 onclick="config()">⚙️</h1>
+   
+ </header>
+ 
+ <dialog id="config">
+   
+ <h3 id="x" onclick="fecharConfig()">X</h3>
+   
+   <h3>Configurações:</h3>
+   <br>
+ <h4>Envio de e-mails:</h4>
+  <select id="AtivarEmails">
+     
+     <option value="false">Desativado</option>
+     <option selected value="true">Ativado</option>
+     <br>
+     
+     
+     
+   </select>
+   <br>
+   
+   <h3>Tema:</h3>
+   
+   <select id="tema">
+     
+     <option selected value="1">Claro</option>
+     <option value="0">Escuro</option>
+   </select>
+   
+   
+   
+   <h2>Sobre você:</h2>
+     
+     <h3 id="user"></h3>
+     <h3 id="E-mail"></h3>
+     <h3 id="tempo"></h3>
+ </dialog>
+ 
+ <dialog id="app">
+   
+<h2>Baixe o aplicativo!</h2>
+   <br>
+   <a href="" download="DGX TEAM APP" onclick="baixar()">Baixar agora</a>
+   <br>
+   <button id="depois" onclick="maisTarde()">Lembre-me Depois</button>
+   
+   
+ </dialog>
+  <main>
+    
+    
+    
+    <section>
+      <h3>Destaques:</h3>
+      
+      
+      
+      <nav id="iframeContainer">
+        
+      <iframe src="https://youtube.com/embed/Gwm6nSgu4mg?si=cCx4vJ9P7iLvDqPB" frameborder="0"></iframe>
+        
+        <iframe src="https://youtube.com/embed/20dbPkwub4I?si=QPWJtDz9G2ThELrU" frameborder="0"></iframe>
+        
+        
+        <iframe src="https://youtube.com/embed/UvSV24Syavk?si=jh7TLl6TVTy7lAAY" frameborder="0"></iframe>
+      </nav>
+    
+      
+      
+    </section>
+    
+    
+    <section>
+      
+    <h3>Jogos e apps:</h3>
+      
+      
+      
+      <nav>
+        
+      <img src="DGXchat.png" alt="" onclick="chat()">
+        
+        
+      </nav>
+      
+      
+    </section>
+    
+    
+    
+    <section>
+      
+      <h3>Grupos:</h3>
+      
+      <nav>
+        
+        <img src="comunidade.png" alt="" onclick="comunidade()">
+        
+      </nav>
+      
+      
+    </section>
+    
+    
+  </main>
+ 
+ <script>
+   
+   // Verifica se o navegador suporta a instalação de aplicativos da web progressivos
+if ('InstallTrigger' in window) {
+    // Chama a solicitação de instalação do aplicativo assim que a página carregar
+    window.addEventListener('load', () => {
+        // Mostra a solicitação de instalação do aplicativo
+        window.InstallTrigger.installPrompt();
+    });
+}
+   
+   
+ </script>
+
+<script src="home.js">home.js</script>
+<script src="enviarEmails.js">enviarEmails.js</script>
+<script src="user.js">user.js</script>
+<script>
+        window.onload = function() {
+            var iframeContainer = document.getElementById('iframeContainer');
+            var iframes = iframeContainer.getElementsByTagName('iframe');
+            var iframesArray = Array.prototype.slice.call(iframes);
+
+            // Shuffle the iframes array
+            shuffleArray(iframesArray);
+
+            // Reattach the iframes in the new order
+            for (var i = 0; i < iframesArray.length; i++) {
+                iframeContainer.appendChild(iframesArray[i]);
+            }
+        };
+
+        function shuffleArray(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+        
+        
+    </script>
+<script src="tema.js">tema.js</script>
+</body>
+<footer>
+  &copy; Ryan | DGX TEAM
+  
+  <br><br>
+  <hr>
+  <br>
+  
+<strong>Parceiros:</strong>
+<br>
+@Kynox, @NFXIM, @CM STUDIO
+  
+</footer>
+</html>

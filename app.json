@@ -1,0 +1,17 @@
+{
+  "name": "DGX TEAM",
+  "short_name": "DGX TEAM",
+  "description": "Vem ser da DGX TEAM!",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#8C00FF",
+  "theme_color": "#591D8A",
+  "icons": [
+    {
+      "src": "https://i.imgur.com/P7Yf94E.jpeg",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
+
