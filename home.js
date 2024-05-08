@@ -24,15 +24,15 @@ if (login === false) {
 
 
 
-//if (dispositivo.includes("android")) {
+if (dispositivo.includes("android")) {
   
-  //if (appBaixado === false) {
+  if (appBaixado === false) {
     
-  //  exibirApp.showModal()
+   exibirApp.showModal()
     
-  //}
+  }
   
-//}
+}
 
 function baixar() {
   
