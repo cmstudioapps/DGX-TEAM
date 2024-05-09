@@ -7,6 +7,8 @@ let configuracao = document.getElementById("config")
 let exibirApp = document.getElementById("app")
 let login = localStorage.getItem("login") || false
 let ativarEmails = localStorage.getItem("AtivarEmails") || true
+let selectEmail = document.getElementById("AtivarEmails")
+selectEmail.value = ativarEmails
 
 setInterval(()=> {
   
@@ -33,6 +35,8 @@ if (dispositivo.includes("android")) {
   }
   
 }
+
+
 
 function baixar() {
   
@@ -73,6 +77,14 @@ function chat() {
 function comunidade() {
   
   window.open("https://chat.whatsapp.com/HD4ytGwdsWz7RqDRwjTTxQ")
+  
+}
+
+function compartilhar() {
+  
+  let url = window.location.href
+window.open("https://wa.me/?text="+url)
+  
   
 }
 
