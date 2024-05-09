@@ -49,6 +49,17 @@ header h3 {
   
 }
 
+#partilhar {
+  
+  background-color: white;
+  color: mediumpurple;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  
+}
+
 nav {
   
   overflow-x: auto;
@@ -108,7 +119,8 @@ dialog {
   margin-left: auto;
   margin-right: auto;
   margin-top: 5vh;
-  animation: config 0.3s ease-in-out forwards;
+  animation: config 0.8s ease-in-out forwards;
+  
   
 }
 
