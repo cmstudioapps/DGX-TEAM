@@ -114,6 +114,12 @@ window.open("https://chat.whatsapp.com/DZpzWWkRKQNGX4kkQA9fZI")
    
  }
  
+ function insta() {
+   
+   window.open("https://www.instagram.com/dgxteam_oficial?igsh=MWkyZGc2dzBmeWdvcA==")
+   
+ }
+ 
 window.addEventListener("contextmenu", function(event) {
   
   event.preventDefault()
