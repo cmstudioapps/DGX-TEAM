@@ -194,9 +194,18 @@ margin-right: auto;
   
 }
 
-#discord {
+#canais img {
   
   height: 10vh;
+  
+}
+
+#canais {
+  
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: transparent;
+  margin: 0px;
   
 }
 
