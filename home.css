@@ -174,6 +174,26 @@ select {
   
 }
 
+#ad-discord {
+  
+  max-height: 50vh;
+  max-width: 80vh;
+  padding: 0;
+  outline: none;
+  overflow: hidden;
+}
+
+#videoDiscord {
+  
+max-height: 50vh;
+max-width: 80vh;
+outline: none;
+
+margin-left: auto;
+margin-right: auto;
+  
+}
+
 
 @keyframes home {
   
