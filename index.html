@@ -1,79 +1,203 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <meta name="description" content="Aplicativo da DGX TEAM!">
-  
-  
-  
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Aplicativo da DGX TEAM">
+  <title>DGX TEAM</title>
   <link rel="shortcut icon" type="image/x-icon" href="logo.ico">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="stylesheet" href="home.css">
   <link rel="manifest" href="app.json">
-  
-  <title>login</title>
 </head>
+
 <body>
-  
-  
-  
-  <header>
-    <h2>DGX TEAM</h2>
+
+ <header>
+   
+ <img id="logo" src="logo.png" alt="">
+   
+   <h3>DGX TEAM</h3>
+   
+   <h1 onclick="config()">⚙️</h1>
+   
+ </header>
+ 
+ <dialog id="config">
+   
+ <h3 id="x" onclick="fecharConfig()">X</h3>
+   
+   <h3>Configurações:</h3>
+   <br>
+ <h4>Envio de e-mails:</h4>
+  <select id="AtivarEmails">
+     
+     <option value="false">Desativado</option>
+     <option selected value="true">Ativado</option>
+     <br>
+     
+     
+     
+   </select>
+   <br>
+   
+   <h3>Tema:</h3>
+   
+   <select id="tema">
+     
+     <option selected value="1">Claro</option>
+     <option value="0">Escuro</option>
+   </select>
+   
+   
+   
+   <h2>Sobre você:</h2>
+     
+     <h3 id="user"></h3>
+     <h3 id="E-mail"></h3>
+     <h3 id="tempo"></h3>
+ </dialog>
+ 
+ <dialog id="app">
+   
+<h2>Baixe o aplicativo!</h2>
+   <br>
+   <a href="DGX TEAM v1.apk" download="DGX TEAM APP" onclick="baixar()">Baixar agora</a>
+   <br>
+   <button id="depois" onclick="maisTarde()">Lembre-me Depois</button>
+   
+   
+ </dialog>
+  <main>
     
-    <img src="logo.png" alt="logo.png">
-    
-    <p>DGX ORG, A PRÓXIMA ORG BRASILEIRA</p>
     
     
-  </header>
-  
-  
-  <div>
-    
-  
+    <section>
+      <h3>Destaques:</h3>
+      
+      
+      
+      <nav id="iframeContainer">
+        
+      <iframe src="https://youtube.com/embed/Gwm6nSgu4mg?si=cCx4vJ9P7iLvDqPB" frameborder="0"></iframe>
+        
+        <iframe src="https://youtube.com/embed/20dbPkwub4I?si=QPWJtDz9G2ThELrU" frameborder="0"></iframe>
+        
+        
+        <iframe src="https://youtube.com/embed/UvSV24Syavk?si=jh7TLl6TVTy7lAAY" frameborder="0"></iframe>
+      </nav>
     
       
-    <h3>Seu Nome:</h3>
-    
-    <input id="Nome" type="text" placeholder="nome aqui..." required>
-    
-    <h3>Seu E-mail:</h3>
-    
-    <input id="email" type="email" placeholder="e-mail aqui..." required>
-    <br>
-    <button onclick="ir()" >Continuar</button>
-    
-    
-    
-    <br>
       
-    <h3 id="aviso">Digite um código de verificação:</h3>
-    
-    <input id="cod" type="number" placeholder="Código de verificação..." onkeyup="cood()">
+    </section>
     
     
+    <section>
+      
+    <h3>Jogos e apps:</h3>
+      
+      
+      
+      <nav>
+        
+      <img src="DGXchat.png" alt="" onclick="chat()">
+        
+        
+      </nav>
+      
+      
+    </section>
     
-  </div>
-  
-  <script>
     
-    // Verifica se o navegador suporta a instalação de aplicativos da web progressivos
+    
+    <section>
+      
+      <h3>comunidade:</h3>
+      
+      <nav>
+        
+        <img src="comunidade.png" alt="" onclick="comunidade()">
+        
+      </nav>
+      
+      
+      <h3>Grupos em Destaques:</h3>
+      
+      <nav>
+        <img src="GP3.png" alt="GP3.png" onclick="cars()">
+        <img src="GP2.png" alt="" onclick="gc()">
+        <img src="GP1.png" alt="GP1.png" onclick="crossover()">
+      </nav>
+      
+    </section>
+    
+    
+  </main>
+ 
+ 
+ 
+ <script id="cid0020000376201631300" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 200px;height: 300px;">{"handle":"chatacessdgx","arch":"js","styles":{"a":"6633ff","b":100,"c":"000000","d":"000000","k":"6633ff","l":"6633ff","m":"6633ff","p":"10","q":"6633ff","r":100,"pos":"br","cv":1,"cvbg":"6633ff","cvw":200,"cvh":30,"surl":0,"ticker":1,"fwtickm":1}}</script>
+ 
+ <script>
+   
+   // Verifica se o navegador suporta a instalação de aplicativos da web progressivos
 if ('InstallTrigger' in window) {
-  // Chama a solicitação de instalação do aplicativo assim que a página carregar
-  window.addEventListener('load', () => {
-    // Mostra a solicitação de instalação do aplicativo
-    window.InstallTrigger.installPrompt();
-  });
-} else {
-  
-  console.log("Seu navegador não suporta a função de mostrar solicitação de instalação")
-  
+    // Chama a solicitação de instalação do aplicativo assim que a página carregar
+    window.addEventListener('load', () => {
+        // Mostra a solicitação de instalação do aplicativo
+        window.InstallTrigger.installPrompt();
+    });
 }
-    
-  </script>
-  <script src="tema.js">tema.js</script>
-  <script src="login.js">login.js</script>
+   
+   
+ </script>
+
+<script src="home.js">home.js</script>
+<script src="enviarEmails.js">enviarEmails.js</script>
+<script src="user.js">user.js</script>
+<script>
+        window.onload = function() {
+            var iframeContainer = document.getElementById('iframeContainer');
+            var iframes = iframeContainer.getElementsByTagName('iframe');
+            var iframesArray = Array.prototype.slice.call(iframes);
+
+            // Shuffle the iframes array
+            shuffleArray(iframesArray);
+
+            // Reattach the iframes in the new order
+            for (var i = 0; i < iframesArray.length; i++) {
+                iframeContainer.appendChild(iframesArray[i]);
+            }
+        };
+
+        function shuffleArray(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+        
+        
+    </script>
+<script src="tema.js">tema.js</script>
 </body>
+<footer>
+  
+  <button id="partilhar" onclick="compartilhar()">Compartilhar</button>
+  <br><br>
+  &copy; Ryan | DGX TEAM
+  
+  <br><br>
+  <hr>
+  <br>
+  
+<strong>Parceiros:</strong>
+<br><br>
+@Kynox, @NFXIM, @CM STUDIO
+  
+</footer>
 </html>
