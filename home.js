@@ -15,7 +15,7 @@ setInterval(() => {
 
 if (login === false) {
   alert("Não encontramos seu login...");
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 }
 
 if (dispositivo.includes("android")) {
