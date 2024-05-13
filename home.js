@@ -88,8 +88,23 @@ window.open("https://wa.me/?text="+url)
   
 }
 
- console.log(innerWidth, innerHeight)
- console.log(dispositivo)
+function gc() {
+  
+ window.open("https://chat.whatsapp.com/Emm5uCKCiFI7f8pO0QWOcF")
+  
+}
+
+function crossover() { 
+  
+window.open("https://chat.whatsapp.com/J5AqVzHRggJBnLJpghETob")
+  
+}
+ function cars() {
+   
+   
+window.open("https://chat.whatsapp.com/DZpzWWkRKQNGX4kkQA9fZI")
+   
+ }
  
 window.addEventListener("touchstart", function(event) {
   
